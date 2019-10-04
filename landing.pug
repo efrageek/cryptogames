@@ -1,0 +1,33 @@
+-var titulo = "Titulo principal"
+-var titulos = ["Titulo principal", "Subtitulo 2", "Subtitulo 3"]
+-var usuario = "david"
+
+doctype html
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    link(rel="stylesheet", href="css/ejercicio-pug.css")
+    title Landing
+  body
+    header
+      h1 CryptoGames
+      if usuario
+        a Hola #{usuario}
+      else
+        a.boton(href="#") Registro
+    section.intro
+      .intro__imagen: img(src="images/imagen.png")
+      .intro__contenido
+        h2 #{titulos[0]}
+        p
+         | Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+         | Magni saepe esse rem corporis deleniti dolorem illo minima 
+         | obcaecati molestiae. Excepturi autem quos distinctio placeat 
+         | sunt corporis animi, quia dolores quasi?
+         span Texto complementario. BUda maduca calamaduca 
+        a.boton Leer Mas
+    ul
+      each titulo in titulos 
+        li=titulo
