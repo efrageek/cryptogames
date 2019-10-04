@@ -1,3 +1,18 @@
 extend componentes/plantilla.pug
 block contenidos
-  h1 Homepage
+  .home-container
+    nav.menu
+      h3.menu__titulo Menu
+      ul.menu__container
+        each enlace in enlaces
+          li.menu__links=enlace
+    section.intro
+      .intro__contenido
+        h2 #{titulos[0]}
+        p
+         | Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+         | Magni saepe esse rem corporis deleniti dolorem illo minima 
+         | obcaecati molestiae. Excepturi autem quos distinctio placeat 
+         | sunt corporis animi, quia dolores quasi?
+         span Aprende m'as sobre el mundo tokenizado 
+         a.boton Leer Mas
