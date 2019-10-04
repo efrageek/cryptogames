@@ -1,22 +1,5 @@
--var titulo = "Titulo principal"
--var titulos = ["Titulo principal", "Subtitulo 2", "Subtitulo 3"]
--var usuario = "david"
-
-doctype html
-html(lang="es")
-  head
-    meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    meta(http-equiv="X-UA-Compatible", content="ie=edge")
-    link(rel="stylesheet", href="css/ejercicio-pug.css")
-    title Landing
-  body
-    header
-      h1 CryptoGames
-      if usuario
-        a Hola #{usuario}
-      else
-        a.boton(href="#") Registro
+extend componentes/plantilla.pug
+block contenidos
     section.intro
       .intro__imagen: img(src="images/imagen.png")
       .intro__contenido
@@ -28,6 +11,7 @@ html(lang="es")
          | sunt corporis animi, quia dolores quasi?
          span Texto complementario. BUda maduca calamaduca 
         a.boton Leer Mas
-    ul
-      each titulo in titulos 
-        li=titulo
+    main.contenido
+      +caja('imagen.png', titulos[1],'Contenido de la caja uno. Muy impresionante')
+      +caja('imagen.png', titulos[2],'Contenido de la caja dos. Muy impresionante')
+      +caja('imagen.png', titulos[3],'Contenido de la caja tres. Muy impresionante')
